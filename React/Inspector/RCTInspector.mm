@@ -5,7 +5,7 @@
 
 #import "RCTInspector.h"
 
-#if RCT_DEV
+#if RCT_DEV && !TARGET_OS_UIKITFORMAC
 
 #include <jsinspector/InspectorInterfaces.h>
 
@@ -80,7 +80,7 @@ RCT_NOT_IMPLEMENTED(- (instancetype)init)
 + (RCTInspectorLocalConnection *)connectPage:(NSInteger)pageId
                          forRemoteConnection:(RCTInspectorRemoteConnection *)remote
 {
-  auto localConnection = getInstance()->connect(pageId, std::make_unique<RemoteConnection>(remote));
+  auto localConnection = getInstance()->connect((int)pageId, std::make_unique<RemoteConnection>(remote));
   return [[RCTInspectorLocalConnection alloc] initWithConnection:std::move(localConnection)];
 }
 

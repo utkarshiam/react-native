@@ -5,9 +5,7 @@
 
 package com.facebook.react.bridge;
 
-/**
- * Constants used by ReactMarker.
- */
+/** Constants used by ReactMarker. */
 public enum ReactMarkerConstants {
   CREATE_REACT_CONTEXT_START,
   CREATE_REACT_CONTEXT_END,
@@ -92,4 +90,8 @@ public enum ReactMarkerConstants {
   ON_FRAGMENT_CREATE,
   JAVASCRIPT_EXECUTOR_FACTORY_INJECT_START,
   JAVASCRIPT_EXECUTOR_FACTORY_INJECT_END,
+  LOAD_REACT_NATIVE_SO_FILE_START,
+  LOAD_REACT_NATIVE_SO_FILE_END,
+  LOAD_REACT_NATIVE_FABRIC_SO_FILE_START,
+  LOAD_REACT_NATIVE_FABRIC_SO_FILE_END,
 }
